@@ -30,7 +30,3 @@ To use this `.vimrc` configuration:
 ## Contributing
 
 Feel free to fork this repository and adapt the `.vimrc` configuration to suit your own preferences. If you have any suggestions for improvements or new features, please open an issue or submit a pull request.
-
-## License
-
-This project is licensed under the [MIT License](LICENSE).
