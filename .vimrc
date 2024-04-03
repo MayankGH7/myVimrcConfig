@@ -76,6 +76,7 @@ Plug 'sheerun/vim-polyglot'
 Plug 'jistr/vim-nerdtree-tabs'
 Plug 'mg979/vim-visual-multi', {'branch': 'master'}
 " Plug 'andymass/vim-matchup'
+Plug 'prettier/vim-prettier', { 'do': 'yarn install --frozen-lockfile --production' }
 call plug#end()
 " }}}
 
