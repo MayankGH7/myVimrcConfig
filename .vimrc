@@ -169,7 +169,12 @@ inoremap <C-v> <ESC>:read !termux-clipboard-get<CR>i
 " }}}
 
 " Abbrevations -- {{{
-iabbrev cpptemp #include <iostream><CR>using namespace std;<CR><CR>int main()<CR>{<CR>return 0;
+augroup abbrevation
+  autocmd!
+  iabbrev cpptemp #include <iostream><CR>using namespace std;<CR><CR>int main()<CR>{<CR>return 0;
+  autocmd FileType javascript iabbrev log console.log()<left>
+  autocmd Filetype html,markdown iabbrev metavp <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+augroup END
 " }}} 
 
 
@@ -183,11 +188,9 @@ augroup main
 	autocmd FileType python nnoremap <buffer> <leader>r :w<CR>:!python3 %<CR>
 	autocmd FileType javascript nnoremap <buffer> <leader>r :w<CR>:!node %<CR>
 	autocmd FileType lua nnoremap <buffer> <leader>r :w<CR>:!lua %<CR>
-  autocmd FileType javascript iabbrev log console.log()<left>
   autocmd Filetype json nnoremap <buffer> <leader>f :%!jq .<CR>
 	autocmd FileType cpp nnoremap <buffer> <leader>r :w <bar> !clang++ -o %< % && ./%< <cr>
 	autocmd FileType c nnoremap <buffer> <leader>r :w <bar> !clang -o %< % && ./%< <cr>
-	autocmd FileType python :iabbrev <buffer> iff if:<left>
 	autocmd FileType html nnoremap <buffer> <localleader>f Vatzf
 
 	" stop autocomment on new line
@@ -257,7 +260,7 @@ let g:rainbow_active = 1
 
 
 " Emmet vim
-let g:user_emmet_leader_key = ','
+" let g:user_emmet_leader_key = ','
 " let g:user_emmet_mode = 'n'
 
 
