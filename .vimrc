@@ -183,7 +183,7 @@ augroup main
 	autocmd!	
 
 	autocmd InsertLeave * :write
-	autocmd FileType python set tabstop=2 shiftwidth=2
+	autocmd FileType python,cpp,javascript set tabstop=2 shiftwidth=2
 	autocmd FileType python nnoremap <buffer> <localleader>c I#<esc>
 	autocmd FileType python nnoremap <buffer> <leader>r :w<CR>:!python3 %<CR>
 	autocmd FileType javascript nnoremap <buffer> <leader>r :w<CR>:!node %<CR>
